@@ -52,3 +52,19 @@ function updateFontColor(eleRef, color) {
 function waitForMs(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
+
+window.onscroll = () => {};
+$(window).scroll(function (event) {
+  var scroll = $(window).scrollTop();
+  let nav = document.getElementsByClassName("c_nav")[0];
+  if (scroll > 120) {
+    document
+      .getElementsByClassName("c_nav")[0]
+      .style.setProperty("background-color", "#1b2631", "important");
+  } else {
+    document
+      .getElementsByClassName("c_nav")[0]
+      .style.setProperty("background-color", "#70707026", "important");
+  }
+  // Do something
+});
